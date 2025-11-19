@@ -127,6 +127,10 @@ Missing values in the `passengers` column are imputed with the median.
 
 Berry, S. T. (1992). "Estimation of a Model of Entry in the Airline Industry." *Econometrica*, 60(4), 889–917.
 
+## Acknowledgments
+
+This implementation was originally developed as part of coursework at the Gies College of Business, University of Illinois, and has been adapted for public release. I am grateful to [Professor Yixin (Iris) Wang](https://giesbusiness.illinois.edu/profile/yixin-iris-wang) for providing the assignment materials and the `Berry_data.csv` dataset that made this project possible.
+
 ## License
 
 This code is provided for educational and research use.
@@ -134,4 +138,3 @@ This code is provided for educational and research use.
 ## Author
 
 Vatsal Mitesh Tailor
-
