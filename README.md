@@ -129,7 +129,7 @@ Berry, S. T. (1992). "Estimation of a Model of Entry in the Airline Industry." *
 
 ## Acknowledgments
 
-This implementation was originally developed as part of coursework at the Gies College of Business, University of Illinois, and has been adapted for public release. I am grateful to [Professor Yixin (Iris) Wang](https://giesbusiness.illinois.edu/profile/yixin-iris-wang) for providing the assignment materials and the `Berry_data.csv` dataset that made this project possible.
+This implementation was originally developed as part of coursework at the Gies College of Business, University of Illinois, and has been adapted for public release. I am grateful to [Professor Yixin (Iris) Wang](https://giesbusiness.illinois.edu/profile/yixin-iris-wang) for providing the reference R code (included in `airline-entry-model/`) and the `Berry_data.csv` dataset that made this project possible.
 
 ## License
 
