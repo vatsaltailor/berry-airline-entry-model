@@ -27,3 +27,18 @@ secrets.md
 # Misc
 *.tmp
 
+
+# Generated results and logs
+*_output.txt
+*_results.txt
+test_*.txt
+bash_test.txt
+simple_test.txt
+inline_test.txt
+run_output.log
+final_output.log
+debug_output.txt
+berry_output.txt
+berry_results.txt
+*.pdf
+!Berry_Model_Results.pdf

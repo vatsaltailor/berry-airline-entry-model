@@ -1,5 +1,0 @@
-Data loaded successfully
-Markets: 2742
-Outcome distribution: N=0: 200, N=1: 840, N>=2: 1702
-X shape: (2742, 4)
-X first row: [ 1.         12.47439222  6.53958596 13.07917191]

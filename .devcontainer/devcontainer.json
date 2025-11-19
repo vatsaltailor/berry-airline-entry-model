@@ -1,0 +1,14 @@
+{
+  "name": "Berry airline entry model",
+  "image": "mcr.microsoft.com/devcontainers/anaconda",
+  "postCreateCommand": "conda install -y numpy pandas scipy",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
+

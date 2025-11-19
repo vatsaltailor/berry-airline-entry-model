@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+
+\title{Berry Airline Entry Model: Estimation Results}
+\author{Vatsal Mitesh Tailor}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\onehalfspacing
+
+\section{Introduction}
+
+This note estimates a static entry model for US airline markets using the
+Berry (1992) framework. The data cover 2{,}742 origin--destination markets with
+up to six potential carriers. Firm profits are
+\begin{equation}
+  \pi_{im} = V_{im} - \delta N_{-im} + \varepsilon_{im},
+\end{equation}
+where $V_{im}$ is a profit index from market covariates, $N_{-im}$ is the
+number of rivals, $\delta > 0$ is the competition effect, and $\varepsilon_{im}
+\sim N(0,1)$. We observe entry decisions but not profit shocks.
+
+\section{Model specifications}
+
+\subsection{Symmetric-firm specification}
+
+All firms are treated as identical. The profit index is
+\begin{equation}
+  V_{im} = X_m'\beta, \quad X_m = (1, \log(\text{pop}_m), \log(\text{dist}_m),
+  \log(\text{dist}_m^2)),
+\end{equation}
+with market size, distance, and distance squared. Firms differ only through
+$\varepsilon_{im}$. Parameters are estimated by maximum likelihood.
+
+\subsection{Heterogeneous-firm specification}
+
+This specification allows firm-specific effects. The profit index is
+\begin{equation}
+  V_{im} = X_m'\beta + s_i,
+\end{equation}
+where $X_m$ includes intercept, average log population, tourism, log distance,
+and log passengers. The $s_i$ are airline-specific size parameters. Entry
+probabilities use a sequential rule where the highest-profit firm enters first.
+
+\section{Results}
+
+Table~\ref{tab:symmetric} shows estimates for the symmetric specification.
+
+\begin{table}[h!]
+  \centering
+  \caption{Symmetric-firm specification}
+  \label{tab:symmetric}
+  \begin{tabular}{l r}
+    \toprule
+    Parameter & Estimate \\ \midrule
+    Constant & 1.296 \\
+    $\log(\text{population})$ & $-0.078$ \\
+    $\log(\text{distance})$ & 0.096 \\
+    $\log(\text{distance}^2)$ & $-0.095$ \\
+    Competition effect $\delta$ & 5.032 \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+The competition parameter $\delta = 5.03$ is large, meaning additional entrants
+reduce profits substantially. Log-likelihood is $-2318.47$ and prediction
+accuracy is 62\,\%.
+
+Table~\ref{tab:heterogeneous} shows the heterogeneous specification.
+
+\begin{table}[h!]
+  \centering
+  \caption{Heterogeneous-firm specification}
+  \label{tab:heterogeneous}
+  \begin{tabular}{l r}
+    \toprule
+    Parameter & Estimate \\ \midrule
+    Constant & 0.329 \\
+    Average log population & $-0.126$ \\
+    Tourism & $-0.087$ \\
+    $\log(\text{distance})$ & 0.287 \\
+    $\log(\text{passengers})$ & 0.840 \\
+    Competition effect $\delta$ & 1.481 \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Log passengers has a large positive coefficient (0.84), consistent with demand
+driving entry. The competition parameter $\delta = 1.48$ is smaller than in the
+symmetric model. Log-likelihood is $-1908.39$ and accuracy is 64\,\%.
+
+\section{Comparison}
+
+Table~\ref{tab:comparison} compares the two models. The heterogeneous
+specification fits better with a higher log-likelihood and accuracy. Adding
+airline-specific effects improves the model.
+
+\begin{table}[h!]
+  \centering
+  \caption{Model comparison}
+  \label{tab:comparison}
+  \begin{tabular}{l r r r}
+    \toprule
+    Specification & Log-likelihood & $\delta$ & Accuracy (\%) \\ \midrule
+    Symmetric firms & $-2318.47$ & 5.03 & 62.1 \\
+    Heterogeneous firms & $-1908.39$ & 1.48 & 64.3 \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+Both models show that competition reduces profits ($\delta > 0$). The symmetric
+model has a larger $\delta$ to compensate for ignoring firm differences. Once
+we add airline-specific size terms, a smaller $\delta$ is sufficient to match
+the data.
+
+\begin{thebibliography}{9}
+
+\bibitem{berry1992}
+Berry, S. T. (1992).
+``Estimation of a model of entry in the airline industry.''
+\emph{Econometrica}, 60(4), 889--917.
+
+\end{thebibliography}
+
+\end{document}
