@@ -1,0 +1,71 @@
+================================================================================
+                         BERRY MODEL COMPARISON
+================================================================================
+
+Data: 2742 markets
+Outcomes: N=0: 200, N=1: 840, N>=2: 1702
+
+================================================================================
+MODEL 1: CORRECTED SPECIFICATION (Matching R Reference Code)
+================================================================================
+Covariates: intercept, log(population), log(distance), log(distance²)
+X shape: (2742, 4)
+
+Estimating...
+
+Results:
+  Constant:          1.296392
+  Log(Population):  -0.077689
+  Log(Distance):     0.095656
+  Log(Distance²):   -0.094625
+  Delta:             5.032490
+  Log-Likelihood:  -2318.4676
+  Converged:       False
+
+================================================================================
+MODEL 2: ORIGINAL SPECIFICATION (With Issues)
+================================================================================
+Covariates: intercept, avg_log(pop), tourism, log(dist), log(passengers)
+X shape: (2742, 5)
+Airline sizes: [0.1  0.15 0.1  0.15 0.05 0.05]
+
+Estimating...
+
+Results:
+  Constant:          0.329315
+  Market Size:      -0.125768
+  Tourism:          -0.087291
+  Distance:          0.286752
+  Passengers:        0.839722
+  Delta:             1.480862
+  Log-Likelihood:  -1908.3888
+  Converged:       True
+
+================================================================================
+COMPARISON SUMMARY
+================================================================================
+
+Log-Likelihood Improvement: -410.0788
+  Corrected Model: -2318.4676
+  Original Model:  -1908.3888
+
+Competition Effect (δ):
+  Corrected: 5.032490
+  Original:  1.480862
+  Difference: +3.551629
+
+================================================================================
+KEY DIFFERENCES
+================================================================================
+1. Probability Calculation:
+   - Corrected: Uses R formula accounting for 2nd-highest firm
+   - Original:  Only considers highest firm (WRONG)
+
+2. Covariates:
+   - Corrected: log(pop), log(dist), log(dist²)
+   - Original:  avg_log(pop), tourism, log(dist), log(passengers)
+
+3. Airline Heterogeneity:
+   - Corrected: None (all firms same)
+   - Original:  Airline-specific size parameters
+================================================================================

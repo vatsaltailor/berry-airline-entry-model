@@ -1,0 +1,75 @@
+Data shape: (2742, 16)
+
+Column names: ['Unnamed: 0', 'market', 'airlineaa', 'airlinedl', 'airlineua', 'airlineal', 'airlinelcc', 'airlinewn', 'airport1', 'population1', 'tourism1', 'airport2', 'population2', 'tourism2', 'distance', 'passengers']
+
+First few rows:
+   Unnamed: 0  market  airlineaa  ...  tourism2  distance  passengers
+0           1  ABEATL          0  ...         0       692      3435.0
+1           2  ABEBNA          0  ...         0       715       786.0
+2           3  ABECVG          0  ...         0       503       939.0
+3           4  ABEDAL          0  ...         0      1354        15.0
+4           5  ABEDEN          0  ...         0      1540      1880.0
+
+[5 rows x 16 columns]
+
+Checking for NaN values:
+Unnamed: 0     0
+market         0
+airlineaa      0
+airlinedl      0
+airlineua      0
+airlineal      0
+airlinelcc     0
+airlinewn      0
+airport1       0
+population1    0
+tourism1       0
+airport2       0
+population2    0
+tourism2       0
+distance       0
+passengers     3
+dtype: int64
+
+Data types:
+Unnamed: 0       int64
+market          object
+airlineaa        int64
+airlinedl        int64
+airlineua        int64
+airlineal        int64
+airlinelcc       int64
+airlinewn        int64
+airport1        object
+population1      int64
+tourism1         int64
+airport2        object
+population2      int64
+tourism2         int64
+distance         int64
+passengers     float64
+dtype: object
+
+Basic statistics:
+        Unnamed: 0    airlineaa  ...     distance     passengers
+count  2742.000000  2742.000000  ...  2742.000000    2739.000000
+mean   1371.500000     0.425602  ...  1096.452589    7424.584885
+std     791.691543     0.494524  ...   621.688794   14135.314183
+min       1.000000     0.000000  ...    67.000000       5.000000
+25%     686.250000     0.000000  ...   619.000000    1076.000000
+50%    1371.500000     0.000000  ...   955.000000    2423.000000
+75%    2056.750000     1.000000  ...  1464.000000    6908.000000
+max    2742.000000     1.000000  ...  2724.000000  150281.000000
+
+[8 rows x 13 columns]
+
+Population1 range: 17932 to 8008278
+Population2 range: 17932 to 8008278
+Distance range: 67 to 2724
+Passengers range: 5.0 to 150281.0
+
+Zeros in key columns:
+Population1 zeros: 0
+Population2 zeros: 0
+Distance zeros: 0
+Passengers zeros: 0

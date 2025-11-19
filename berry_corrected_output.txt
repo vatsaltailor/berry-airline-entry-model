@@ -1,0 +1,71 @@
+======================================================================
+               BERRY AIRLINE ENTRY MODEL - CORRECTED
+          Matching R Reference Implementation
+======================================================================
+
+Loading and preprocessing data...
+Markets: 2742
+Parameters: 4
+Covariates: intercept, log(population), log(distance), log(distance^2)
+Outcome distribution: N=0: 200, N=1: 840, N>=2: 1702
+
+Starting log-likelihood: -2492.5921
+
+Optimizing with BFGS (matching R)...
+         Current function value: 2318.467615
+         Iterations: 18
+         Function evaluations: 384
+         Gradient evaluations: 62
+
+Optimization complete: False
+Message: Desired error not necessarily achieved due to precision loss.
+
+======================================================================
+ESTIMATION RESULTS - CORRECTED MODEL
+======================================================================
+
+Parameter Estimates:
+----------------------------------------------------------------------
+Parameter                                  Estimate
+----------------------------------------------------------------------
+Constant (α)                               1.296392
+Log(Population) (β₁)                      -0.077689
+Log(Distance) (β₂)                         0.095656
+Log(Distance²) (β₃)                       -0.094625
+Competition Effect (δ)                     5.032490
+----------------------------------------------------------------------
+
+Log-Likelihood: -2318.4676
+Number of Observations: 2742
+Overall Prediction Accuracy: 62.07%
+
+======================================================================
+COMPARISON WITH PREVIOUS MODEL
+======================================================================
+Previous model used:
+  - Incorrect P(N=1) formula
+  - Different covariates (avg log pop, tourism, passengers)
+  - Airline-specific size parameters
+
+Corrected model uses:
+  - Correct P(N=1) formula from R code
+  - R specification: log(pop), log(dist), log(dist²)
+  - No airline heterogeneity (all firms same)
+======================================================================
+
+======================================================================
+VALIDATION SUMMARY
+======================================================================
+
+Key Changes Made:
+1. ✓ Fixed P(N=1) calculation to match R formula
+2. ✓ Changed covariates to: log(pop), log(dist), log(dist²)
+3. ✓ Removed airline-specific size parameters
+4. ✓ Used BFGS optimizer (matching R)
+
+Final Results:
+  - Log-Likelihood: -2318.4676
+  - Competition Effect (δ): 5.0325
+  - Prediction Accuracy: 62.07%
+======================================================================
+

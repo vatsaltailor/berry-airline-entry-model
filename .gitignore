@@ -1,0 +1,29 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS / editor files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Local secrets and config
+secrets.md
+*.env
+
+# Misc
+*.tmp
+

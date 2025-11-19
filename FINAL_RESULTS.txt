@@ -1,0 +1,54 @@
+======================================================================
+                    BERRY AIRLINE ENTRY MODEL
+               Static Entry Game Estimation - Berry (1992)
+======================================================================
+
+MODEL SPECIFICATION
+----------------------------------------------------------------------
+Profit Function: π_{i,m} = V_{i,m} - δ * N_{-i,m} + ε_{i,m}
+where V_{i,m} = α + β'X_m + airline_size_i
+ε_{i,m} ~ N(0,1)
+
+DATA
+----------------------------------------------------------------------
+Number of Markets: 2742
+Number of Airlines: 6 (AA, DL, UA, AL, LCC, WN)
+Outcome Distribution:
+  N=0 (No Entry):     200 markets (7.3%)
+  N=1 (Monopoly):     840 markets (30.6%)
+  N>=2 (Competition): 1702 markets (62.1%)
+
+PARAMETER ESTIMATES
+----------------------------------------------------------------------
+Constant (α)                          0.329315
+Market Size (β₁)                     -0.125768
+Tourism (β₂)                         -0.087291
+Distance (β₃)                         0.286752
+Passengers (β₄)                       0.839722
+Competition Effect (δ)                1.480862
+----------------------------------------------------------------------
+
+MODEL FIT
+----------------------------------------------------------------------
+Log-Likelihood: -1908.3888
+Overall Prediction Accuracy: 64.30%
+  N=0 Accuracy: 31.00%
+  N=1 Accuracy: 0.00%
+  N>=2 Accuracy: 99.94%
+----------------------------------------------------------------------
+
+INTERPRETATION
+----------------------------------------------------------------------
+1. Market Size (β₁ = -0.1258):
+   Negative coefficient suggests larger markets may have other
+   characteristics that reduce profitability (after controlling for passengers).
+
+2. Distance (β₃ = 0.2868):
+   Positive coefficient indicates longer routes are more profitable.
+
+3. Passengers (β₄ = 0.8397):
+   Strong positive effect - more passengers increase profitability.
+
+4. Competition Effect (δ = 1.4809):
+   Each additional competitor reduces profit by 1.4809 units.
+======================================================================

@@ -1,0 +1,55 @@
+
+======================================================================
+               BERRY AIRLINE ENTRY MODEL
+          Static Entry Game Estimation - Berry (1992)
+======================================================================
+
+Loading and preprocessing data...
+Markets: 2742
+Parameters in beta: 5
+Outcome distribution: N=0: 200, N=1: 840, N>=2: 1702
+
+Starting values: [ 0.  0.  0.  0.  0. -2.]
+Starting log-likelihood: -10000000000.0000
+
+Optimizing...
+Optimization terminated successfully.
+         Current function value: 10000000000.000000
+         Iterations: 18
+         Function evaluations: 143
+
+✓ Optimization successful!
+
+======================================================================
+ESTIMATION RESULTS
+======================================================================
+
+Parameter Estimates:
+----------------------------------------------------------------------
+Parameter                        Estimate
+----------------------------------------------------------------------
+Constant (α)                     0.000000
+Market Size (β₁)                 0.000000
+Tourism (β₂)                     0.000000
+Distance (β₃)                    0.000000
+Passengers (β₄)                  0.000000
+Competition (δ)                  0.135335
+----------------------------------------------------------------------
+
+Log-Likelihood: -10000000000.0000
+Number of Observations: 2742
+
+======================================================================
+KEY PARAMETERS (3 main estimates)
+======================================================================
+1. Market Size Effect (β₁):          0.000000
+2. Distance Effect (β₃):              0.000000
+3. Competition Effect (δ):            0.135335
+======================================================================
+
+Prediction Accuracy: 62.18%
+
+======================================================================
+Estimation complete!
+======================================================================
+
