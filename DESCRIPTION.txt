@@ -1,0 +1,1 @@
+Python implementation of the Berry (1992) static entry game for U.S. airline markets. Estimates how market characteristics and competition affect airline entry decisions using maximum likelihood estimation.
